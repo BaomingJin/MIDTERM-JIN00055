@@ -1,25 +1,50 @@
-const gulp = require('gulp')
-const sass = require('gulp-sass')
-const browserSync = require('browser-sync').create()
-const postcss = require('gulp-postcss')
-const autoprefixer = require('autoprefixer')
-const cssnano = require('cssnano')
+var gulp = require('gulp'),
+    browserSync = require('browser-sync').create(),
+    replace = require('gulp-replace'),
+    sass = require('gulp-sass');
 
-gulp.task('sass',function(){
-  const plugins =[
-    autoprefixer({browsers:['last 2 version']}),
-    cssnano()
-  ]
-  return gulp
-  .src('scss/**/*.scss')
-  .pipe(sass())
-  .pipe(gulp.dest('css'))
-  .pipe(postcss(plugins))
-  .pipe(gulp.dest('css/min'))
-  .pipe(browserSync.stream())
-})
-gulp.task('default',function(){
-  browserSync.init({server:'./'})
-  gulp.watch('scss/**/*.scss',gulp.series('sass'))
-  gulp.watch('*.html').on('change',browserSync.reload)
-})
+sass.compiler = require('node-sass');
+
+gulp.task('server', function(){
+    browserSync.init({
+        server: './src',
+        notify: false
+    });
+    
+    gulp.watch('src/css/*.scss', ['sass']);
+});
+
+gulp.task('sass', function () {
+    return gulp.src('./src/css/*.scss')
+        .pipe(sass().on('error', sass.logError))
+        .pipe(gulp.dest('./src/css'))
+        .pipe(browserSync.stream());
+});
+
+// build
+gulp.task('build', function(){
+    gulp.src('src/css/*.css')
+    .pipe(gulp.dest('dist/css/'));
+
+    gulp.src('src/img/*')
+    .pipe(gulp.dest('dist/img/'));
+
+    gulp.src('src/js/*')
+    .pipe(gulp.dest('dist/js/'));
+
+    gulp.src('src/*.html')
+    .pipe(gulp.dest('dist/'));
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
