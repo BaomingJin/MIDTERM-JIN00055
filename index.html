@@ -1,42 +1,71 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Week 5 - Gulp, Sass and Bootstrap 4</title>
-    <!-- Adding  -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/min/main.css">
-  </head>
-  <body>
-    <div class="container">
-      <h1>Some Sass, Gulp and Bootstrap</h1>
-      <p>
-        Creating Gulp tasks to compile our Sass to Css, auto refresh the browser, automatically add the browser prefixes and minify our CSS to use in production.
-      </p>
-      <nav>
-        <ul class="nav">
-          <li class="nav-item">
-            <a class="nav-link active" href="#">Active</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-          </li>
-        </ul>
-      </nav>
-      <div>
-        <div class="shape1"></div>
-        <div class="shape2"></div>
-        <div class="shape3"></div>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="format-detection" content="telephone=no">
+  
+  <title>Tesla Model S</title>
+  <link rel="stylesheet" href="css/car.css" />
+</head>
+<body>
+  <div class="main">
+    <section class="page1">
+      <header>
+        <h1>Tesla</h1>
+        <h2>Model S</h2>
+      </header>
+      <ul class="stats">
+        <li class="stat">
+          <p class="top">30<sub>cu ft</sub></p>
+          <div class="info">Best in Class Storage</div>
+        </li>
+        <li class="stat">
+          <p class="top">2.4<sub>s</sub></p>
+          <div class="info">From 0-60 mph</div>
+        </li>
+        <li class="stat">
+          <p class="top">335<sub>mi</sub></p>
+          <div class="info">Mile Range</div>
+        </li>
+        <li class="stat last">
+         <a class="btn-buy" href="https://www.tesla.com/models/design">Order Now</a>
+        </li>
+      </ul>
+    </section>
+    <section class="page2">
+      <div class="intro">
+        <h2>Safety</h2>
+        <h1>High Impact Protection</h1>
+        <p>Model S is built from the ground up as an electric vehicle, with high-strength architecture and a floor-mounted battery pack allowing for incredible impact protection.</p>
       </div>
-    </div>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
-  </body>
+      <img src="./img/page2.png">
+      <a class="btn-buy" href="https://www.tesla.com/models/design">Order Now</a>
+    </section>
+    <section class="page3">
+      <div class="page-bg"></div>
+      <div class="text-container">
+        <header>
+          <h2 >Performance</h2>
+          <h1>Quickest Acceleration</h1>
+          <a class="btn-buy" href="https://www.tesla.com/models/design">Order Now</a>
+        </header>
+        <p class="intro">Model S sets an industry standard for performance and safety. Tesla’s all-electric powertrain delivers unparalleled performance in all weather conditions – with Dual Motor All-Wheel Drive and ludicrous acceleration.</p>
+      </div>
+    </section>
+    <section class="page4">
+      <div class="buy-container">
+        <h1>Order Model S</h1>
+        <a class="btn-buy" href="https://www.tesla.com/models/design">Order Now</a>
+      </div>
+      <img src="./img/page4.jpg">
+    </section>
+  </div>
+
+  <script src="./js/jquery-1.12.4.min.js"></script>
+  <script src="./js/jquery.onepage-scroll.js"></script>
+  <script src="./js/car.js"></script>
+</body>
 </html>
