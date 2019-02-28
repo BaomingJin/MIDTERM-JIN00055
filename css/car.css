@@ -1,0 +1,191 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset,
+form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer,
+header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video, button, input, textarea {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  line-height: 1; }
+
+header, footer, section, article, aside, nav, hgroup, address, figure, figcaption, menu, details, a {
+  display: block; }
+
+li {
+  list-style: none; }
+
+html, body {
+  height: 100%;
+  font-family: Gotham Light,"M Hei PRC W45","M Hei HK W42","M Hei HK W40","HelveticaNeue-Regular","Helvetica Neue Regular","Helvetica Neue",Helvetica,Arial,sans-serif; }
+
+.main {
+  max-width: 960px;
+  height: 100%;
+  margin: 0 auto; }
+  .main .section {
+    width: 100%;
+    height: 100%;
+    background-color: #f2f2f2; }
+  .main .page1 {
+    background: url(../img/page1.jpg) no-repeat center center;
+    background-size: cover; }
+    .main .page1 header {
+      text-align: center;
+      position: absolute;
+      top: 16%;
+      margin-top: -33px;
+      width: 100%;
+      color: #fff; }
+      .main .page1 header h1 {
+        font-weight: normal;
+        font-size: 23px; }
+      .main .page1 header h2 {
+        font-weight: normal;
+        font-size: 40px;
+        margin-top: 5px; }
+    .main .page1 .stats {
+      position: absolute;
+      top: 82%;
+      left: 0;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      height: 45px;
+      padding: 0 20px; }
+      .main .page1 .stats .stat {
+        text-align: center;
+        line-height: 20px; }
+        .main .page1 .stats .stat .top {
+          font-size: 35px;
+          etter-spacing: -1px; }
+          .main .page1 .stats .stat .top sub {
+            display: inline-block;
+            vertical-align: 0;
+            font-size: .6em;
+            margin-left: 1px; }
+        .main .page1 .stats .stat .info {
+          font-size: 13px; }
+  .main .page2 {
+    overflow: hidden; }
+    .main .page2 .intro {
+      width: 50%;
+      height: 100%;
+      padding: 40px 0 0 50px;
+      background-color: #FFFFFF; }
+      .main .page2 .intro h2 {
+        font-weight: normal;
+        font-size: 17px;
+        line-height: 1; }
+      .main .page2 .intro h1 {
+        margin: 20px 0;
+        font-weight: normal;
+        font-size: 27px;
+        line-height: 1; }
+      .main .page2 .intro p {
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 24px; }
+    .main .page2 img {
+      position: absolute;
+      top: 50%;
+      left: 10%;
+      width: auto;
+      height: 100%;
+      transform: translateY(-50%); }
+    .main .page2 .btn-buy {
+      position: absolute;
+      left: 50px;
+      bottom: 100px; }
+  .main .page3 {
+    display: flex;
+    flex-direction: column; }
+    .main .page3 .page-bg {
+      background: url(../img/page3.jpg) no-repeat center center;
+      background-size: cover;
+      flex: 1; }
+    .main .page3 .text-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 40px 16px; }
+      .main .page3 .text-container header h2 {
+        font-size: 17px;
+        font-weight: normal;
+        line-height: 1; }
+      .main .page3 .text-container header h1 {
+        margin: 16px 0;
+        font-size: 27px;
+        font-weight: normal;
+        line-height: 1; }
+      .main .page3 .text-container .intro {
+        margin-left: 20px;
+        flex: 1;
+        line-height: 24px;
+        font-size: 16px; }
+  .main .page4 {
+    display: flex;
+    align-items: center;
+    padding-left: 50px;
+    background-color: #FFFFFF;
+    overflow: hidden; }
+    .main .page4 .buy-container h1 {
+      font-weight: normal;
+      font-size: 27px; }
+    .main .page4 .buy-container .btn-buy {
+      width: 320px;
+      margin-top: 20px; }
+    .main .page4 img {
+      position: absolute;
+      left: 64%;
+      width: 100%; }
+  .main .btn-buy {
+    font-weight: normal;
+    text-decoration: none;
+    width: 150px;
+    height: 40px;
+    border: 3px solid #000;
+    border-radius: 100px;
+    color: #000;
+    font-size: 10px;
+    text-align: center;
+    line-height: 34px;
+    text-transform: uppercase;
+    cursor: pointer; }
+
+@media screen and (max-width: 580px) {
+  .main .page1 .stats {
+    transform: scale(0.8); }
+    .main .page1 .stats .stat.last {
+      position: absolute;
+      bottom: -64px; }
+  .main .page2 .intro {
+    padding-left: 20px;
+    padding-right: 10px; }
+  .main .page2 .btn-buy {
+    left: 20px; }
+  .main .page2 img {
+    left: -12%; }
+  .main .page3 .text-container {
+    padding: 20px 8px;
+    flex-direction: column; }
+    .main .page3 .text-container header {
+      text-align: center; }
+      .main .page3 .text-container header h1 {
+        margin: 8px 0; }
+      .main .page3 .text-container header .btn-buy {
+        margin: auto; }
+    .main .page3 .text-container .intro {
+      margin-left: 0;
+      text-align: center; }
+  .main .page4 {
+    padding-left: 0;
+    justify-content: center; }
+    .main .page4 .buy-container {
+      width: 100%;
+      text-align: center; }
+      .main .page4 .buy-container .btn-buy {
+        width: 80%;
+        margin: 20px auto 0; }
+    .main .page4 img {
+      bottom: 70px;
+      left: 0%; } }
